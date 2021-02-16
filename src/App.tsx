@@ -1,31 +1,42 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
+import { AcademicCapOutline } from "heroicons-react";
+
+import Home from './views/Home'
+import Projects from './views/Projects'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button onClick={() => setCount(count => count + 1)}>count is: {count}</button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container mx-auto">
+        <div className="mt-4 flex flex-row justify-between">
+          <div className="flex">
+            <AcademicCapOutline className="mr-4" />
+            <Link to="/">Portfolio</Link>
+          </div>
+
+          <div className="flex">
+            <Link className="mr-2" to="/projects">
+              Projects
+            </Link>
+            <Link className="mr-2" to="/">About</Link>
+            <Link to="/">About</Link>
+          </div>
+
+          <div className="">Get in touch</div>
+        </div>
+
+        <Switch>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   )
 }
 
