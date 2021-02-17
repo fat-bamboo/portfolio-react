@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
-        <div className="container mx-auto px-6 flex-grow">
+        <div className="container mx-auto px-6 flex-grow max-w-5xl">
           <nav className="mt-4 flex flex-row justify-between">
             <Link className="flex p-2 rounded hover:bg-gray-100" to="/">
               <AcademicCapOutline className="mr-4" />
@@ -62,8 +62,28 @@ function App() {
             </Switch>
           </div>
         </div>
-        <footer className="w-full text-center bg-gray-800 text-white p-4">
-          <div className="container mx-auto">Spencer Woo © 2019-{currentYear}</div>
+        <footer className="w-full text-center bg-gray-800 text-gray-400 p-4">
+          <div className="container mx-auto">
+            <div>
+              Powered by{' '}
+              <a className="hover:text-white" href="https://reactjs.org/">
+                React
+              </a>
+              ,{' '}
+              <a className="hover:text-white" href="https://tailwindcss.com/">
+                Tailwind CSS
+              </a>
+              ,{' '}
+              <a className="hover:text-white" href="https://vitejs.dev/">
+                Vite
+              </a>{' '}
+              and{' '}
+              <a className="hover:text-white" href="https://www.typescriptlang.org/">
+                TypeScript.
+              </a>
+            </div>
+            <div>Spencer Woo © 2019-{currentYear}</div>
+          </div>
         </footer>
       </div>
     </Router>
