@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { CSSTransition } from 'react-transition-group'
 
 import { AcademicCapOutline, MenuOutline, MailOutline } from 'heroicons-react'
 
@@ -13,6 +14,7 @@ const App = () => {
   const currentYear: number = new Date().getFullYear()
   const [showMenu, setShowMenu] = useState(false)
 
+  const menuRef = React.useRef(null)
   const toggleMenu = () => {
     setShowMenu(!showMenu)
   }
@@ -26,6 +28,7 @@ const App = () => {
               <AcademicCapOutline className="mr-4" />
               <span>Home</span>
             </Link>
+
             {/* Navigation on desktop devices */}
             <div className="flex hidden md:block">
               <Link className="text-blue-700 p-2 mr-2 rounded hover:bg-blue-50" to="/projects">
@@ -44,27 +47,30 @@ const App = () => {
             >
               Get in touch
             </a>
+
             {/* Navigation on mobile devices (dropdown menu) */}
             <button className="md:hidden p-2" onClick={toggleMenu}>
               <MenuOutline />
             </button>
-            {showMenu && (
-              <div className="absolute right-0 top-0 flex flex-col space-y-4 m-6 p-4 rounded bg-white shadow-xl">
-                <Link className="" to="/projects" onClick={toggleMenu}>
-                  Projects
-                </Link>
-                <Link className="" to="/social" onClick={toggleMenu}>
-                  Social
-                </Link>
-                <Link className="" to="/gpg" onClick={toggleMenu}>
-                  GPG
-                </Link>
-                <a className="flex items-center" href="mailto:spencer.wushangbo@gmail.com" onClick={toggleMenu}>
-                  <span className="mr-2">Get in touch</span>
-                  <MailOutline size={20} />
-                </a>
+            <CSSTransition in={showMenu} timeout={300} classNames="menu" unmountOnExit nodeRef={menuRef}>
+              <div className="absolute top-0 right-0" ref={menuRef}>
+                <div className="flex flex-col space-y-4 m-3 p-4 rounded bg-white shadow-xl">
+                  <Link className="" to="/projects" onClick={toggleMenu}>
+                    Projects
+                  </Link>
+                  <Link className="" to="/social" onClick={toggleMenu}>
+                    Social
+                  </Link>
+                  <Link className="" to="/gpg" onClick={toggleMenu}>
+                    GPG
+                  </Link>
+                  <a className="flex items-center" href="mailto:spencer.wushangbo@gmail.com" onClick={toggleMenu}>
+                    <span className="mr-2">Get in touch</span>
+                    <MailOutline size={20} />
+                  </a>
+                </div>
               </div>
-            )}
+            </CSSTransition>
           </nav>
 
           <div className="my-16">
@@ -87,6 +93,7 @@ const App = () => {
             </Switch>
           </div>
         </div>
+
         <footer className="w-full text-center bg-gray-800 text-gray-400 p-4">
           <div className="container mx-auto">
             <div>
