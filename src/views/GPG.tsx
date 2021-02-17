@@ -1,6 +1,6 @@
 import React from 'react'
 
-function GPG() {
+const GPG = () => {
   return <div className="pl-2">GPG</div>
 }
 

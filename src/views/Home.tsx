@@ -2,7 +2,7 @@ import React from 'react'
 import avatar from '../assets/avatar.png'
 import wave from '../assets/wave.png'
 
-function Home() {
+const Home = () => {
   return (
     <div className="pl-2 flex flex-col">
       <div className="mt-6">

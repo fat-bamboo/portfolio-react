@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import { AcademicCapOutline } from 'heroicons-react'
+import { AcademicCapOutline, MenuOutline, MailOutline } from 'heroicons-react'
 
 import Home from './views/Home'
 import Projects from './views/Projects'
@@ -9,8 +9,13 @@ import NotFound from './views/NotFound'
 import Social from './views/Social'
 import GPG from './views/GPG'
 
-function App() {
+const App = () => {
   const currentYear: number = new Date().getFullYear()
+  const [showMenu, setShowMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  }
 
   return (
     <Router>
@@ -21,8 +26,8 @@ function App() {
               <AcademicCapOutline className="mr-4" />
               <span>Home</span>
             </Link>
-
-            <div className="flex">
+            {/* Navigation on desktop devices */}
+            <div className="flex hidden md:block">
               <Link className="text-blue-700 p-2 mr-2 rounded hover:bg-blue-50" to="/projects">
                 Projects
               </Link>
@@ -33,16 +38,36 @@ function App() {
                 GPG
               </Link>
             </div>
-
             <a
-              className="bg-pink-50 text-pink-700 p-2 rounded hover:bg-pink-100"
+              className="bg-pink-50 text-pink-700 p-2 rounded hover:bg-pink-100 hidden md:block"
               href="mailto:spencer.wushangbo@gmail.com"
             >
               Get in touch
             </a>
+            {/* Navigation on mobile devices (dropdown menu) */}
+            <button className="md:hidden p-2" onClick={toggleMenu}>
+              <MenuOutline />
+            </button>
+            {showMenu && (
+              <div className="absolute right-0 top-0 flex flex-col space-y-4 m-6 p-4 rounded bg-white shadow-xl">
+                <Link className="" to="/projects" onClick={toggleMenu}>
+                  Projects
+                </Link>
+                <Link className="" to="/social" onClick={toggleMenu}>
+                  Social
+                </Link>
+                <Link className="" to="/gpg" onClick={toggleMenu}>
+                  GPG
+                </Link>
+                <a className="flex items-center" href="mailto:spencer.wushangbo@gmail.com" onClick={toggleMenu}>
+                  <span className="mr-2">Get in touch</span>
+                  <MailOutline size={20} />
+                </a>
+              </div>
+            )}
           </nav>
 
-          <div className="mt-16">
+          <div className="my-16">
             <Switch>
               <Route path="/projects">
                 <Projects />

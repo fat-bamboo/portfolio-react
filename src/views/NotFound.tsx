@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import cat from '../assets/cat.png'
 
-function getRandomQuote(): String {
+const getRandomQuote = (): String => {
   const quotes: String[] = [
     'Whoops, where are we.',
     "That's a four-oh-four.",
@@ -12,7 +12,7 @@ function getRandomQuote(): String {
   return quotes[Math.floor(Math.random() * quotes.length)]
 }
 
-function NotFound() {
+const NotFound = () => {
   return (
     <div className="pl-2">
       <div className="p-2 mb-4 border-l-4 border-gray-300 text-gray-400 flex">
