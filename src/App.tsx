@@ -42,7 +42,7 @@ const App = () => {
       <div className="min-h-screen flex flex-col">
         <div className="container mx-auto px-6 flex-grow max-w-5xl">
           <nav className="mt-4 flex flex-row justify-between">
-            <Link className="flex p-2 rounded hover:bg-gray-100" to="/">
+            <Link className="flex lg:p-2 py-2 rounded lg:hover:bg-gray-100" to="/">
               <AcademicCapOutline className="mr-4" />
               <span>Home</span>
             </Link>

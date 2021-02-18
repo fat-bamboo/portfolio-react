@@ -14,7 +14,7 @@ const getRandomQuote = (): String => {
 
 const NotFound = () => {
   return (
-    <div className="pl-2">
+    <div className="lg:pl-2">
       <div className="p-2 mb-4 border-l-4 border-gray-300 text-gray-400 flex">
         <img src={cat} alt="cat" className="h-6 w-6 mr-1" />
         <div>{getRandomQuote()}</div>
