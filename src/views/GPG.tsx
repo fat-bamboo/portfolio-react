@@ -28,7 +28,7 @@ const GPG = () => {
           rel="noopener noreferrer"
         >
           Keybase
-        </a>
+        </a>{' '}
         with:
         <pre className="font-mono p-2 mt-2 border-2 border-gray-100 rounded overflow-auto">
           curl https://keybase.io/spencerwoo/pgp_keys.asc | gpg --import

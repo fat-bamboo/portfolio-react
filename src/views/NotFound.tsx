@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import cat from '../assets/cat.png'
 
-const getRandomQuote = (): String => {
-  const quotes: String[] = [
+const getRandomQuote = (): string => {
+  const quotes: string[] = [
     'Whoops, where are we.',
     "That's a four-oh-four.",
     "Seems that you're lost.",
