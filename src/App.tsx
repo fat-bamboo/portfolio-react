@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 
-import { AcademicCapOutline, MenuOutline, MailOutline } from 'heroicons-react'
+import { AcademicCapOutline, MenuOutline, ExternalLinkOutline } from 'heroicons-react'
 
 import Home from './views/Home'
 import Projects from './views/Projects'
@@ -90,7 +90,7 @@ const App = () => {
                   </Link>
                   <a className="flex items-center" href="mailto:spencer.wushangbo@gmail.com" onClick={closeMenu}>
                     <span className="mr-2">Get in touch</span>
-                    <MailOutline size={20} />
+                    <ExternalLinkOutline size={20} />
                   </a>
                 </div>
               </div>
