@@ -5,7 +5,7 @@ import wave from '../assets/wave.png'
 const Home = () => {
   return (
     <div className="pl-2 flex flex-col">
-      <div className="mt-6">
+      <div>
         <img className="w-18 h-18 shadow-lg rounded-full" src={avatar} alt="avatar" />
         <div className="mt-8 text-2xl font-bold flex">
           <img className="w-8 h-8 mr-2 wave" src={wave} alt="wave" />
