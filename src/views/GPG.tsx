@@ -1,5 +1,5 @@
-import React from 'react'
 import { FingerPrintOutline } from 'heroicons-react'
+import React from 'react'
 
 const GPG = () => {
   return (

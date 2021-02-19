@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { AcademicCapOutline, ExternalLinkOutline, MenuOutline } from 'heroicons-react'
+import React, { useEffect, useRef, useState } from 'react'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
-
-import { AcademicCapOutline, MenuOutline, ExternalLinkOutline } from 'heroicons-react'
-
-import Home from './views/Home'
-import Projects from './views/Projects'
-import NotFound from './views/NotFound'
-import Social from './views/Social'
 import GPG from './views/GPG'
+import Home from './views/Home'
+import NotFound from './views/NotFound'
+import Projects from './views/Projects'
+import Social from './views/Social'
 
 const App = () => {
   const currentYear: number = new Date().getFullYear()

@@ -1,17 +1,10 @@
-import React from 'react'
 import { BeakerOutline } from 'heroicons-react'
+import React from 'react'
+import ProjectCard from '../components/ProjectCard'
 import { projects } from '../config/projects'
 
-import ProjectCard from '../components/ProjectCard'
-
 const projectCards = projects.map(p => (
-  <ProjectCard
-    key={p.name}
-    name={p.name}
-    link={p.link}
-    description={p.description}
-    backgroundImage={p.backgroundImage}
-  />
+  <ProjectCard key={p.name} name={p.name} link={p.link} slug={p.slug} bimg={p.bimg} />
 ))
 
 const Projects = () => {

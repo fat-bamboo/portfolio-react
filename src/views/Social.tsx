@@ -1,5 +1,5 @@
-import React from 'react'
 import { ShareOutline } from 'heroicons-react'
+import React from 'react'
 
 const Social = () => {
   return (
