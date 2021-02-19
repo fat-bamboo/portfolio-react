@@ -1,12 +1,6 @@
 import React from 'react'
 import { ChevronRightOutline, RssOutline } from 'heroicons-react'
-
-interface ProjectProps {
-  name: string
-  link: string
-  description: string
-  backgroundImage: string
-}
+import { ProjectProps } from '../config/projects'
 
 class ProjectCard extends React.Component<ProjectProps> {
   render() {
