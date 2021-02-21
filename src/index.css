@@ -73,3 +73,68 @@ html {
   transform-origin: top right;
   transition: opacity 200ms, transform 200ms;
 }
+
+.dot-flashing {
+  @apply bg-gray-100;
+  position: relative;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  @apply bg-gray-100;
+  left: -9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  @apply bg-gray-100;
+  left: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    @apply bg-gray-100;
+  }
+  50%,
+  100% {
+    @apply bg-gray-400;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-enter-active {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 200ms;
+}
