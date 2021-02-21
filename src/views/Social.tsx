@@ -4,7 +4,7 @@ import SocialCard from '../components/SocialCard'
 import { socials } from '../config/socials'
 
 const socialCards = socials.map(s => (
-  <SocialCard key={s.name} name={s.name} link={s.name} icon={s.icon} apiUrl={s.apiUrl} color={s.color} />
+  <SocialCard key={s.name} name={s.name} link={s.link} icon={s.icon} apiUrl={s.apiUrl} color={s.color} />
 ))
 
 const Social = () => {
