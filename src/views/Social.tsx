@@ -16,8 +16,8 @@ const Social = () => {
       </div>
 
       <div className="mt-12 flex flex-wrap -m-1">{socialCards}</div>
-
-      <div className="mt-4">Kind of a quiet guy on the internet now. Cheers.</div>
+      <img className="mt-4 rounded" src="https://genshin-card.getloli.com/39/272133020.png" alt="Genshin Impact Card" />
+      <div className="mt-4">HuTao Supremacy!</div>
       <div className="mt-2">
         Oh, and these awesome statistics are powered by{' '}
         <a
@@ -26,9 +26,9 @@ const Social = () => {
           rel="noopener noreferrer"
           className="p-1 bg-yellow-50 hover:text-yellow-600"
         >
-          Substats.
-        </a>{' '}
-        Which you should definitely take a look.
+          Substats
+        </a>
+        , which you should definitely take a look.
       </div>
     </div>
   )
