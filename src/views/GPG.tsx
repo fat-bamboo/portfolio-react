@@ -1,11 +1,11 @@
-import { FingerPrintOutline } from 'heroicons-react'
+import { FingerPrintIcon } from '@heroicons/react/outline'
 import React from 'react'
 
 const GPG = () => {
   return (
     <div className="lg:pl-2">
       <div className="text-2xl font-bold flex items-center">
-        <FingerPrintOutline size={28} className="mr-4" />
+        <FingerPrintIcon className="mr-4 w-6 h-6" />
         <div>GPG</div>
       </div>
 
@@ -13,7 +13,7 @@ const GPG = () => {
         I have verified my identity with a GPG signature, proving my ownership of this domain. View the cryptography
         proof here:{' '}
         <a
-          className="p-1 bg-indigo-50 hover:text-indigo-600"
+          className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
           href="http://keybase.io/spencerwoo/sigchain#abb6f40f8c804e7411e91544b7cdb8e011df8e6f84dcd0b709f848f85dc6248d0f"
           target="_blank"
           rel="noopener noreferrer"
@@ -22,7 +22,7 @@ const GPG = () => {
         </a>
         . Pull my GPG public key hosted at{' '}
         <a
-          className="p-1 bg-yellow-50 hover:text-yellow-600"
+          className="text-yellow-600 hover:text-yellow-500 dark:text-yellow-400 dark:hover:text-yellow-300"
           href="http://keybase.io/spencerwoo"
           target="_blank"
           rel="noopener noreferrer"

@@ -1,4 +1,4 @@
-import { ShareOutline } from 'heroicons-react'
+import { ShareIcon } from '@heroicons/react/outline'
 import React from 'react'
 import SocialCard from '../components/SocialCard'
 import { socials } from '../config/socials'
@@ -11,7 +11,7 @@ const Social = () => {
   return (
     <div className="lg:pl-2">
       <div className="text-2xl font-bold flex items-center">
-        <ShareOutline size={28} className="mr-4" />
+        <ShareIcon className="mr-4 w-5 h-5" />
         <div>Social</div>
       </div>
 
@@ -24,7 +24,7 @@ const Social = () => {
           href="https://github.com/spencerwooo/substats"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-1 bg-yellow-50 hover:text-yellow-600"
+          className="text-yellow-500 hover:text-yellow-400 dark:text-yellow-400 dark:hover:text-yellow-300"
         >
           Substats
         </a>

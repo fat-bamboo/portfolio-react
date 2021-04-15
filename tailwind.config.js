@@ -1,14 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    safeList: [],
-    content: [
-      './index.html',
-      './src/**/*.{js,jsx,ts,tsx}',
-    ],
-  },
+  mode: 'jit',
+  purge: [
+    './index.html',
+    './src/**/*.{js,jsx,ts,tsx}',
+  ],
+  darkMode: 'media',
   theme: {
     extend: {
       fontWeight: ['hover', 'focus'],

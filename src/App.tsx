@@ -1,4 +1,4 @@
-import { AcademicCapOutline, ExternalLinkOutline, MenuOutline } from 'heroicons-react'
+import { AcademicCapIcon, ExternalLinkIcon, MenuIcon } from '@heroicons/react/outline'
 import React, { useEffect, useRef, useState } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
@@ -37,28 +37,40 @@ const App = () => {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col dark:bg-gray-900 dark:text-white">
         <div className="container mx-auto px-6 flex-grow max-w-5xl">
           <nav className="mt-4 flex flex-row justify-between">
-            <Link className="flex lg:p-2 py-2 rounded lg:hover:bg-gray-100" to="/">
-              <AcademicCapOutline className="mr-4" />
+            <Link
+              className="flex lg:p-2 py-2 rounded items-center lg:hover:bg-gray-100 lg:hover:dark:bg-gray-800"
+              to="/"
+            >
+              <AcademicCapIcon className="mr-4 w-5 h-5" />
               <span>Home</span>
             </Link>
 
             {/* Navigation on desktop devices */}
             <div className="hidden md:flex">
-              <Link className="text-blue-700 p-2 mr-2 rounded hover:bg-blue-50" to="/projects">
+              <Link
+                className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 hover:dark:bg-gray-800"
+                to="/projects"
+              >
                 Projects
               </Link>
-              <Link className="text-blue-700 p-2 mr-2 rounded hover:bg-blue-50" to="/social">
+              <Link
+                className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 hover:dark:bg-gray-800"
+                to="/social"
+              >
                 Social
               </Link>
-              <Link className="text-blue-700 p-2 rounded hover:bg-blue-50" to="/gpg">
+              <Link
+                className="text-blue-700 dark:text-yellow-400 p-2 rounded hover:bg-blue-50 hover:dark:bg-gray-800"
+                to="/gpg"
+              >
                 GPG
               </Link>
             </div>
             <a
-              className="bg-pink-50 text-pink-700 p-2 rounded hover:bg-pink-100 hidden md:block"
+              className="bg-pink-100 text-pink-700 p-2 rounded bg-opacity-40 hover:bg-opacity-80 dark:bg-opacity-10 dark:hover:bg-opacity-20 hidden md:block"
               href="mailto:spencer.wushangbo@gmail.com"
             >
               Get in touch
@@ -72,11 +84,11 @@ const App = () => {
                 setShowMenu(true)
               }}
             >
-              <MenuOutline />
+              <MenuIcon className="w-5 h-5" />
             </button>
             <CSSTransition in={showMenu} timeout={300} classNames="menu" unmountOnExit nodeRef={menuRef}>
               <div className="absolute top-0 right-0" ref={menuRef}>
-                <div className="flex flex-col space-y-4 m-3 p-4 rounded bg-white shadow-xl">
+                <div className="flex flex-col space-y-4 m-3 p-4 rounded bg-white dark:bg-gray-800 shadow-xl">
                   <Link to="/projects" onClick={closeMenu}>
                     Projects
                   </Link>
@@ -88,7 +100,7 @@ const App = () => {
                   </Link>
                   <a className="flex items-center" href="mailto:spencer.wushangbo@gmail.com" onClick={closeMenu}>
                     <span className="mr-2">Get in touch</span>
-                    <ExternalLinkOutline size={20} />
+                    <ExternalLinkIcon className="w-5 h-5" />
                   </a>
                 </div>
               </div>

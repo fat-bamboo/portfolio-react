@@ -1,4 +1,4 @@
-import { BeakerOutline } from 'heroicons-react'
+import { BeakerIcon } from '@heroicons/react/outline'
 import React from 'react'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../config/projects'
@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <div className="lg:pl-2">
       <div className="text-2xl font-bold flex items-center">
-        <BeakerOutline size={28} className="mr-4" />
+        <BeakerIcon className="mr-4 w-6 h-6" />
         <div>Projects</div>
       </div>
 

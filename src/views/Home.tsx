@@ -16,7 +16,7 @@ const Home = () => {
       <div className="leading-relaxed mt-12">
         Postgrad at the{' '}
         <a
-          className="p-1 bg-blue-50 hover:text-blue-800"
+          className="text-blue-700 hover:text-blue-500 dark:text-blue-500 hover:dark:text-blue-300"
           href="https://www.gla.ac.uk/"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,7 +25,7 @@ const Home = () => {
         </a>
         . Alumni of the{' '}
         <a
-          className="p-1 bg-green-50 hover:text-green-800"
+          className="text-green-700 hover:text-green-500 dark:text-green-500 dark:hover:text-green-400"
           href="http://www.bit.edu.cn"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,7 +34,7 @@ const Home = () => {
         </a>
         . Senior author at{' '}
         <a
-          className="p-1 bg-red-50 hover:text-red-800"
+          className="text-red-700 hover:text-red-500 dark:text-gred-500 dark:hover:text-red-400"
           href="https://sspai.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -60,7 +60,7 @@ const Home = () => {
           href="https://github.com/spencerwooo"
           target="_blank"
           rel="noopener noreferrer"
-          className="pb-1 border-b-2 border-black hover:text-gray-600"
+          className="pb-1 border-b-2 border-black hover:text-gray-600 dark:border-white dark:hover:text-gray-400"
         >
           GitHub
         </a>
@@ -68,7 +68,7 @@ const Home = () => {
           href="https://twitter.com/realSpencerWoo"
           target="_blank"
           rel="noopener noreferrer"
-          className="pb-1 border-b-2 border-blue-500 hover:text-blue-600"
+          className="pb-1 border-b-2 border-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
         >
           Twitter
         </a>
