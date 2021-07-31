@@ -1,6 +1,6 @@
 import bithesis from '../assets/bithesis.png'
 import dowww from '../assets/dowww.png'
-import onedriveCfIndex from '../assets/onedrive-cf-index.png'
+import onedriveVercelIndex from '../assets/onedrive-vercel-index.png'
 import substats from '../assets/substats.png'
 import vscodeMathToImage from '../assets/vscode-math-to-image.png'
 
@@ -19,10 +19,10 @@ export const projects: ProjectProps[] = [
     bimg: substats,
   },
   {
-    name: 'onedrive-cf-index',
-    link: 'https://github.com/spencerwooo/onedrive-cf-index',
-    slug: 'spencerwooo/onedrive-cf-index',
-    bimg: onedriveCfIndex,
+    name: 'onedrive-vercel-index',
+    link: 'https://github.com/spencerwooo/onedrive-vercel-index',
+    slug: 'spencerwooo/onedrive-vercel-index',
+    bimg: onedriveVercelIndex,
   },
   {
     name: 'dowww',

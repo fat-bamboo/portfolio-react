@@ -16,10 +16,9 @@ const Social = () => {
       </div>
 
       <div className="mt-12 flex flex-wrap -m-1">{socialCards}</div>
-      <img className="mt-4 rounded" src="https://genshin-card.getloli.com/39/272133020.png" alt="Genshin Impact Card" />
-      <div className="mt-4">HuTao Supremacy!</div>
-      <div className="mt-2">
-        Oh, and these awesome statistics are powered by{' '}
+
+      <div className="mt-4 text-gray-400">
+        * These awesome statistics are powered by{' '}
         <a
           href="https://github.com/spencerwooo/substats"
           target="_blank"
