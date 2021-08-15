@@ -41,7 +41,7 @@ const App = () => {
         <div className="container mx-auto px-6 flex-grow max-w-5xl">
           <nav className="mt-4 flex flex-row justify-between">
             <Link
-              className="flex lg:p-2 py-2 rounded items-center lg:hover:bg-gray-100 lg:hover:dark:bg-gray-800"
+              className="flex lg:p-2 py-2 rounded items-center lg:hover:bg-gray-100 lg:dark:hover:bg-gray-800"
               to="/"
             >
               <AcademicCapIcon className="mr-4 w-5 h-5" />
@@ -51,19 +51,19 @@ const App = () => {
             {/* Navigation on desktop devices */}
             <div className="hidden md:flex">
               <Link
-                className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 hover:dark:bg-gray-800"
+                className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
                 to="/projects"
               >
                 Projects
               </Link>
               <Link
-                className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 hover:dark:bg-gray-800"
+                className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
                 to="/social"
               >
                 Social
               </Link>
               <Link
-                className="text-blue-700 dark:text-yellow-400 p-2 rounded hover:bg-blue-50 hover:dark:bg-gray-800"
+                className="text-blue-700 dark:text-yellow-400 p-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
                 to="/gpg"
               >
                 GPG
